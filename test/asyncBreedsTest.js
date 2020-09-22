@@ -1,6 +1,5 @@
 const assert = require('chai').assert;
 const breedDetailsFromFile = require('../asyncBreeds');
-const { doesNotMatch } = require('assert');
 
 describe('breedDetailsFromFile: ', () => {
   it('provides, via callback, breed details for the bombay breed', (done) => {
@@ -14,9 +13,7 @@ describe('breedDetailsFromFile: ', () => {
   it('provides, via callback, undefined for a breed that does not exist', (done) => {
     breedDetailsFromFile('Saphire', (desc) => {
       assert.equal(undefined, desc);
-      done(); 
-    });      
+      done();
+    });
   });
-
-
 });
